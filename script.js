@@ -9,10 +9,10 @@ const getPost = async () => {
     `https://jsonplaceholder.typicode.com/users/1/posts?_limit=${limit}$_page=${pageCount}`
   );
   const json = await response.json();
-  console.log("js", json);
+  //   console.log("js", json);
 
   json.map((currElm, curr) => {
-    console.log("eke", curr);
+    // console.log("eke", curr);
     const htmlData = `
     <div class="posts">
         <p class="post-id">${postCount++}</p>
@@ -38,7 +38,7 @@ window.addEventListener("scroll", () => {
     window.document.documentElement;
 
   if (scrollTop + clientHeight >= scrollHeight) {
-    console.log(`iam at back`);
+    // console.log(`iam at back`);
     showData();
   }
 });
